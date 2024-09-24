@@ -190,17 +190,13 @@ class HomeController extends Controller
 #### firtst you have to download this project from github
 #### second you have to write this code in terminal for download folder vendore
 ```
-
 composer update
-
 ```
 
 #### third you run this project 
 
 ```
-
 php artisan serve
-
 ```
 
 
