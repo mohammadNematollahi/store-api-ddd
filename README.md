@@ -185,6 +185,32 @@ class HomeController extends Controller
 
 ## Hello every body this is description project
 
-#### Now you are asking yourself, how do I know the paths of this project to test this project? well it's easy you how to doing this way
+### Now you are asking yourself, how do I know the paths of this project to test this project? well it's easy you how to doing this way
 
-# - firtst you have to download this project from github
+#### firtst you have to download this project from github
+#### second you have to write this code in terminal for download folder vendore
+```
+
+composer update
+
+```
+
+#### third you run this project 
+
+```
+
+php artisan serve
+
+```
+
+
+#### and finally you have to go to this way for see document project 
+
+```
+http://localhost:8000/docs
+```
+
+#### and you see this page 
+
+
+![Screenshot 2024-09-24 114642](https://github.com/user-attachments/assets/cc7f481d-9fbe-4ee5-90d0-4cfdb851cd44)
