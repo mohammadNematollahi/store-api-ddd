@@ -1,0 +1,1285 @@
+openapi: 3.0.3
+info:
+  title: Laravel
+  description: ''
+  version: 1.0.0
+servers:
+  -
+    url: 'http://127.0.0.1:8000'
+paths:
+  /api/admin:
+    get:
+      summary: ''
+      operationId: getApiAdmin
+      description: ''
+      parameters: []
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: Unauthenticated.
+                properties:
+                  message:
+                    type: string
+                    example: Unauthenticated.
+      tags:
+        - Endpoints
+      security: []
+  /api/admin/users:
+    get:
+      summary: ''
+      operationId: getApiAdminUsers
+      description: ''
+      parameters: []
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: Unauthenticated.
+                properties:
+                  message:
+                    type: string
+                    example: Unauthenticated.
+      tags:
+        - Endpoints
+      security: []
+  /api/admin/categories:
+    get:
+      summary: ''
+      operationId: getApiAdminCategories
+      description: ''
+      parameters: []
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: Unauthenticated.
+                properties:
+                  message:
+                    type: string
+                    example: Unauthenticated.
+      tags:
+        - Endpoints
+      security: []
+  '/api/admin/category/{id}':
+    get:
+      summary: ''
+      operationId: getApiAdminCategoryId
+      description: ''
+      parameters: []
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: Unauthenticated.
+                properties:
+                  message:
+                    type: string
+                    example: Unauthenticated.
+      tags:
+        - Endpoints
+      security: []
+    parameters:
+      -
+        in: path
+        name: id
+        description: 'The ID of the category.'
+        example: 1
+        required: true
+        schema:
+          type: integer
+  /api/admin/category/create:
+    post:
+      summary: ''
+      operationId: postApiAdminCategoryCreate
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Endpoints
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                  description: ''
+                  example: minima
+              required:
+                - name
+      security: []
+  '/api/admin/category/edit/{category_id}':
+    put:
+      summary: ''
+      operationId: putApiAdminCategoryEditCategory_id
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Endpoints
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                  description: ''
+                  example: non
+              required:
+                - name
+      security: []
+    parameters:
+      -
+        in: path
+        name: category_id
+        description: 'The ID of the category.'
+        example: 1
+        required: true
+        schema:
+          type: integer
+  '/api/admin/category/destroy/{category_id}':
+    delete:
+      summary: ''
+      operationId: deleteApiAdminCategoryDestroyCategory_id
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Endpoints
+      security: []
+    parameters:
+      -
+        in: path
+        name: category_id
+        description: 'The ID of the category.'
+        example: 1
+        required: true
+        schema:
+          type: integer
+  /api/admin/brands:
+    get:
+      summary: ''
+      operationId: getApiAdminBrands
+      description: ''
+      parameters: []
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: Unauthenticated.
+                properties:
+                  message:
+                    type: string
+                    example: Unauthenticated.
+      tags:
+        - Endpoints
+      security: []
+  '/api/admin/brand/{id}':
+    get:
+      summary: ''
+      operationId: getApiAdminBrandId
+      description: ''
+      parameters: []
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: Unauthenticated.
+                properties:
+                  message:
+                    type: string
+                    example: Unauthenticated.
+      tags:
+        - Endpoints
+      security: []
+    parameters:
+      -
+        in: path
+        name: id
+        description: 'The ID of the brand.'
+        example: 1
+        required: true
+        schema:
+          type: integer
+  /api/admin/brand/create:
+    post:
+      summary: ''
+      operationId: postApiAdminBrandCreate
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Endpoints
+      security: []
+  '/api/admin/brand/edit/{brand_id}':
+    put:
+      summary: ''
+      operationId: putApiAdminBrandEditBrand_id
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Endpoints
+      security: []
+    parameters:
+      -
+        in: path
+        name: brand_id
+        description: 'The ID of the brand.'
+        example: 1
+        required: true
+        schema:
+          type: integer
+  '/api/admin/brand/destroy/{brand_id}':
+    delete:
+      summary: ''
+      operationId: deleteApiAdminBrandDestroyBrand_id
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Endpoints
+      security: []
+    parameters:
+      -
+        in: path
+        name: brand_id
+        description: 'The ID of the brand.'
+        example: 1
+        required: true
+        schema:
+          type: integer
+  /api/admin/products:
+    get:
+      summary: ''
+      operationId: getApiAdminProducts
+      description: ''
+      parameters: []
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: Unauthenticated.
+                properties:
+                  message:
+                    type: string
+                    example: Unauthenticated.
+      tags:
+        - Endpoints
+      security: []
+  '/api/admin/product/{id}':
+    get:
+      summary: ''
+      operationId: getApiAdminProductId
+      description: ''
+      parameters: []
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: Unauthenticated.
+                properties:
+                  message:
+                    type: string
+                    example: Unauthenticated.
+      tags:
+        - Endpoints
+      security: []
+    parameters:
+      -
+        in: path
+        name: id
+        description: 'The ID of the product.'
+        example: 1
+        required: true
+        schema:
+          type: integer
+  /api/admin/product/create:
+    post:
+      summary: ''
+      operationId: postApiAdminProductCreate
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Endpoints
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                  description: ''
+                  example: molestiae
+                price:
+                  type: string
+                  description: ''
+                  example: magnam
+                marketable:
+                  type: string
+                  description: ''
+                  example: aperiam
+                brand_id:
+                  type: string
+                  description: ''
+                  example: molestiae
+                categroy_id:
+                  type: string
+                  description: ''
+                  example: fugit
+              required:
+                - name
+                - price
+                - marketable
+                - brand_id
+                - categroy_id
+      security: []
+  '/api/admin/product/edit/{product_id}':
+    put:
+      summary: ''
+      operationId: putApiAdminProductEditProduct_id
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Endpoints
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                  description: ''
+                  example: quo
+                price:
+                  type: string
+                  description: ''
+                  example: rem
+                marketable:
+                  type: string
+                  description: ''
+                  example: sint
+                brand_id:
+                  type: string
+                  description: ''
+                  example: sed
+                categroy_id:
+                  type: string
+                  description: ''
+                  example: pariatur
+              required:
+                - name
+                - price
+                - marketable
+                - brand_id
+                - categroy_id
+      security: []
+    parameters:
+      -
+        in: path
+        name: product_id
+        description: 'The ID of the product.'
+        example: 1
+        required: true
+        schema:
+          type: integer
+  '/api/admin/product/destroy/{product_id}':
+    delete:
+      summary: ''
+      operationId: deleteApiAdminProductDestroyProduct_id
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Endpoints
+      security: []
+    parameters:
+      -
+        in: path
+        name: product_id
+        description: 'The ID of the product.'
+        example: 1
+        required: true
+        schema:
+          type: integer
+  /api/admin/provinces:
+    get:
+      summary: ''
+      operationId: getApiAdminProvinces
+      description: ''
+      parameters: []
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: Unauthenticated.
+                properties:
+                  message:
+                    type: string
+                    example: Unauthenticated.
+      tags:
+        - Endpoints
+      security: []
+  '/api/admin/province/{id}':
+    get:
+      summary: ''
+      operationId: getApiAdminProvinceId
+      description: ''
+      parameters: []
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: Unauthenticated.
+                properties:
+                  message:
+                    type: string
+                    example: Unauthenticated.
+      tags:
+        - Endpoints
+      security: []
+    parameters:
+      -
+        in: path
+        name: id
+        description: 'The ID of the province.'
+        example: 1
+        required: true
+        schema:
+          type: integer
+  /api/admin/province/create:
+    post:
+      summary: ''
+      operationId: postApiAdminProvinceCreate
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Endpoints
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                  description: ''
+                  example: hic
+              required:
+                - name
+      security: []
+  '/api/admin/province/edit/{province_id}':
+    put:
+      summary: ''
+      operationId: putApiAdminProvinceEditProvince_id
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Endpoints
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                  description: ''
+                  example: aut
+              required:
+                - name
+      security: []
+    parameters:
+      -
+        in: path
+        name: province_id
+        description: 'The ID of the province.'
+        example: 1
+        required: true
+        schema:
+          type: integer
+  '/api/admin/province/destroy/{province_id}':
+    delete:
+      summary: ''
+      operationId: deleteApiAdminProvinceDestroyProvince_id
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Endpoints
+      security: []
+    parameters:
+      -
+        in: path
+        name: province_id
+        description: 'The ID of the province.'
+        example: 1
+        required: true
+        schema:
+          type: integer
+  /api/admin/cities:
+    get:
+      summary: ''
+      operationId: getApiAdminCities
+      description: ''
+      parameters: []
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: Unauthenticated.
+                properties:
+                  message:
+                    type: string
+                    example: Unauthenticated.
+      tags:
+        - Endpoints
+      security: []
+  '/api/admin/city/{id}':
+    get:
+      summary: ''
+      operationId: getApiAdminCityId
+      description: ''
+      parameters: []
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: Unauthenticated.
+                properties:
+                  message:
+                    type: string
+                    example: Unauthenticated.
+      tags:
+        - Endpoints
+      security: []
+    parameters:
+      -
+        in: path
+        name: id
+        description: 'The ID of the city.'
+        example: 1
+        required: true
+        schema:
+          type: integer
+  /api/admin/city/create:
+    post:
+      summary: ''
+      operationId: postApiAdminCityCreate
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Endpoints
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                  description: ''
+                  example: quae
+                province_id:
+                  type: string
+                  description: ''
+                  example: nam
+              required:
+                - name
+                - province_id
+      security: []
+  '/api/admin/city/edit/{city_id}':
+    put:
+      summary: ''
+      operationId: putApiAdminCityEditCity_id
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Endpoints
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                  description: ''
+                  example: ab
+                province_id:
+                  type: string
+                  description: ''
+                  example: autem
+              required:
+                - name
+                - province_id
+      security: []
+    parameters:
+      -
+        in: path
+        name: city_id
+        description: 'The ID of the city.'
+        example: 1
+        required: true
+        schema:
+          type: integer
+  '/api/admin/city/destroy/{city_id}':
+    delete:
+      summary: ''
+      operationId: deleteApiAdminCityDestroyCity_id
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Endpoints
+      security: []
+    parameters:
+      -
+        in: path
+        name: city_id
+        description: 'The ID of the city.'
+        example: 1
+        required: true
+        schema:
+          type: integer
+  /api/admin/addresses:
+    get:
+      summary: ''
+      operationId: getApiAdminAddresses
+      description: ''
+      parameters: []
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: Unauthenticated.
+                properties:
+                  message:
+                    type: string
+                    example: Unauthenticated.
+      tags:
+        - Endpoints
+      security: []
+  '/api/admin/address/{id}':
+    get:
+      summary: ''
+      operationId: getApiAdminAddressId
+      description: ''
+      parameters: []
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: Unauthenticated.
+                properties:
+                  message:
+                    type: string
+                    example: Unauthenticated.
+      tags:
+        - Endpoints
+      security: []
+    parameters:
+      -
+        in: path
+        name: id
+        description: 'The ID of the address.'
+        example: 1
+        required: true
+        schema:
+          type: integer
+  /api/admin/payments:
+    get:
+      summary: ''
+      operationId: getApiAdminPayments
+      description: ''
+      parameters: []
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: Unauthenticated.
+                properties:
+                  message:
+                    type: string
+                    example: Unauthenticated.
+      tags:
+        - Endpoints
+      security: []
+  '/api/admin/payment/{id}':
+    get:
+      summary: ''
+      operationId: getApiAdminPaymentId
+      description: ''
+      parameters: []
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: Unauthenticated.
+                properties:
+                  message:
+                    type: string
+                    example: Unauthenticated.
+      tags:
+        - Endpoints
+      security: []
+    parameters:
+      -
+        in: path
+        name: id
+        description: 'The ID of the payment.'
+        example: 8
+        required: true
+        schema:
+          type: integer
+  /api/admin/orders:
+    get:
+      summary: ''
+      operationId: getApiAdminOrders
+      description: ''
+      parameters: []
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: Unauthenticated.
+                properties:
+                  message:
+                    type: string
+                    example: Unauthenticated.
+      tags:
+        - Endpoints
+      security: []
+  '/api/admin/order/{id}':
+    get:
+      summary: ''
+      operationId: getApiAdminOrderId
+      description: ''
+      parameters: []
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: Unauthenticated.
+                properties:
+                  message:
+                    type: string
+                    example: Unauthenticated.
+      tags:
+        - Endpoints
+      security: []
+    parameters:
+      -
+        in: path
+        name: id
+        description: 'The ID of the order.'
+        example: 8
+        required: true
+        schema:
+          type: integer
+  '/api/product/{product_id}':
+    get:
+      summary: ''
+      operationId: getApiProductProduct_id
+      description: ''
+      parameters: []
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  data:
+                    id: 1
+                    name: 'لباس بچگانه'
+                    price: 200000
+                    created_at: null
+                properties:
+                  data:
+                    type: object
+                    properties:
+                      id:
+                        type: integer
+                        example: 1
+                      name:
+                        type: string
+                        example: 'لباس بچگانه'
+                      price:
+                        type: integer
+                        example: 200000
+                      created_at:
+                        type: string
+                        example: null
+      tags:
+        - Endpoints
+      security: []
+    parameters:
+      -
+        in: path
+        name: product_id
+        description: 'The ID of the product.'
+        example: 1
+        required: true
+        schema:
+          type: integer
+  '/api/product/{product_id}/add-to-cart':
+    get:
+      summary: ''
+      operationId: getApiProductProduct_idAddToCart
+      description: ''
+      parameters: []
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: Unauthenticated.
+                properties:
+                  message:
+                    type: string
+                    example: Unauthenticated.
+      tags:
+        - Endpoints
+      security: []
+    parameters:
+      -
+        in: path
+        name: product_id
+        description: 'The ID of the product.'
+        example: 1
+        required: true
+        schema:
+          type: integer
+  /api/payment:
+    get:
+      summary: ''
+      operationId: getApiPayment
+      description: ''
+      parameters: []
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: Unauthenticated.
+                properties:
+                  message:
+                    type: string
+                    example: Unauthenticated.
+      tags:
+        - Endpoints
+      security: []
+  /api/callback:
+    get:
+      summary: ''
+      operationId: getApiCallback
+      description: ''
+      parameters: []
+      responses:
+        500:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: 'Server Error'
+                properties:
+                  message:
+                    type: string
+                    example: 'Server Error'
+      tags:
+        - Endpoints
+      security: []
+  /api/panel:
+    get:
+      summary: ''
+      operationId: getApiPanel
+      description: ''
+      parameters: []
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: Unauthenticated.
+                properties:
+                  message:
+                    type: string
+                    example: Unauthenticated.
+      tags:
+        - Endpoints
+      security: []
+  /api/panel/address:
+    get:
+      summary: ''
+      operationId: getApiPanelAddress
+      description: ''
+      parameters: []
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: Unauthenticated.
+                properties:
+                  message:
+                    type: string
+                    example: Unauthenticated.
+      tags:
+        - Endpoints
+      security: []
+  '/api/panel/address/{id}':
+    get:
+      summary: ''
+      operationId: getApiPanelAddressId
+      description: ''
+      parameters: []
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: Unauthenticated.
+                properties:
+                  message:
+                    type: string
+                    example: Unauthenticated.
+      tags:
+        - Endpoints
+      security: []
+    parameters:
+      -
+        in: path
+        name: id
+        description: 'The ID of the address.'
+        example: 1
+        required: true
+        schema:
+          type: integer
+  /api/panel/address/create:
+    post:
+      summary: ''
+      operationId: postApiPanelAddressCreate
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Endpoints
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                address:
+                  type: string
+                  description: ''
+                  example: ut
+                city_id:
+                  type: string
+                  description: ''
+                  example: consequatur
+              required:
+                - address
+                - city_id
+      security: []
+  '/api/panel/address/edit/{address_id}':
+    put:
+      summary: ''
+      operationId: putApiPanelAddressEditAddress_id
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Endpoints
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                address:
+                  type: string
+                  description: ''
+                  example: suscipit
+                city_id:
+                  type: string
+                  description: ''
+                  example: esse
+              required:
+                - address
+                - city_id
+      security: []
+    parameters:
+      -
+        in: path
+        name: address_id
+        description: 'The ID of the address.'
+        example: 1
+        required: true
+        schema:
+          type: integer
+  '/api/panel/address/destroy/{address_id}':
+    delete:
+      summary: ''
+      operationId: deleteApiPanelAddressDestroyAddress_id
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Endpoints
+      security: []
+    parameters:
+      -
+        in: path
+        name: address_id
+        description: 'The ID of the address.'
+        example: 1
+        required: true
+        schema:
+          type: integer
+  /api/panel/cart-items:
+    get:
+      summary: ''
+      operationId: getApiPanelCartItems
+      description: ''
+      parameters: []
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: Unauthenticated.
+                properties:
+                  message:
+                    type: string
+                    example: Unauthenticated.
+      tags:
+        - Endpoints
+      security: []
+  '/api/panel/cart-item/{cartItem}':
+    delete:
+      summary: ''
+      operationId: deleteApiPanelCartItemCartItem
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Endpoints
+      security: []
+    parameters:
+      -
+        in: path
+        name: cartItem
+        description: ''
+        example: aspernatur
+        required: true
+        schema:
+          type: string
+  /api/login:
+    post:
+      summary: ''
+      operationId: postApiLogin
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Endpoints
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                password:
+                  type: string
+                  description: ''
+                  example: dolorem
+                email:
+                  type: string
+                  description: 'Must be a valid email address.'
+                  example: gweissnat@example.net
+              required:
+                - password
+                - email
+      security: []
+  /api/register:
+    post:
+      summary: ''
+      operationId: postApiRegister
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Endpoints
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                  description: ''
+                  example: consequatur
+                email:
+                  type: string
+                  description: 'Must be a valid email address.'
+                  example: theresia.wisozk@example.com
+                password:
+                  type: string
+                  description: ''
+                  example: voluptatem
+                c_password:
+                  type: string
+                  description: 'The value and <code>password</code> must match.'
+                  example: voluptatibus
+              required:
+                - name
+                - email
+                - password
+                - c_password
+      security: []
+  /api/logout:
+    get:
+      summary: ''
+      operationId: getApiLogout
+      description: ''
+      parameters: []
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: Unauthenticated.
+                properties:
+                  message:
+                    type: string
+                    example: Unauthenticated.
+      tags:
+        - Endpoints
+      security: []
+tags:
+  -
+    name: Endpoints
+    description: ''
