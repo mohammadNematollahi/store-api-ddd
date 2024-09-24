@@ -182,3 +182,9 @@ class HomeController extends Controller
     php artisan ddd list
 ```
 # store-api-ddd
+
+## Hello every body this is description project
+
+#### Now you are asking yourself, how do I know the paths of this project to test this project? well it's easy you how to doing this way
+
+# - firtst you have to download this project from github
